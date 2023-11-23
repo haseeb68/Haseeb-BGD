@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpeedRacer : MonoBehaviour
+public class AnswerAssignment4_2 : MonoBehaviour
 {
     public string carMaker;
     public string carModel = "GTR R35";
@@ -17,7 +17,6 @@ public class SpeedRacer : MonoBehaviour
     public bool hasFrontEngine = true;
 
     public class Fuel
-
     {
         public int fuelLevel;
 
@@ -25,11 +24,13 @@ public class SpeedRacer : MonoBehaviour
         {
             fuelLevel = amount;
         }
-
-        public Fuel carFuel = new Fuel(100);
     }
+
+    public Fuel carFuel = new Fuel(100);
+
     void Start()
     {
+       
         print("The racer model is " + carModel + " by " + carMaker + ". It has a " + engineType + " engine.");
 
         CheckWeight();
@@ -87,6 +88,7 @@ public class SpeedRacer : MonoBehaviour
 
     void CheckWeight()
     {
+    
         if (carWeight < 1500)
         {
             print("The " + carModel + " weighs less than 1500 kg.");
@@ -104,6 +106,7 @@ public class SpeedRacer : MonoBehaviour
 
     string CheckCharacteristics()
     {
+       
         if (isCarTypeSedan)
         {
             return "The car is a sedan type.";
